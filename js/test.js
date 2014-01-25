@@ -86,8 +86,8 @@ function wordClick() {
     alert("Enter something to remember the count by!");
   }
   else {
-    numWords++;
-    if(numWords<=9) {
+    if((numWords+1)<=9) {
+      numWords++;
       var wordid = "#word" + numWords.toString();
       $(wordid).removeClass("hide");
       $(wordid + " h3:first-of-type").text(word);
