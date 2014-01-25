@@ -2,6 +2,7 @@
 var count = 0;
 function counter() {
   count++;
+  $("#number").text(count);
   console.log(count);
 }
 
