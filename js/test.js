@@ -1,4 +1,9 @@
 // Self-written js/jquery testing nia
+var count = 0;
+function counter() {
+  count++;
+  console.log(count);
+}
 
 var numWords = 0;
 var count1 = 0;
@@ -13,6 +18,7 @@ var count9 = 0;
 
 function helloWorld() {
   $("#word1").text('helloWorld!');
+<<<<<<< HEAD
 }
 
 function keyIncrease(e) {
@@ -32,6 +38,8 @@ function keyIncrease(e) {
     case 9: if(numWords>=9) count9++; break;
     default: break;
   }
+=======
+>>>>>>> 135d93f8dec541233133e136a6ce276dcfc5ebef
 }
 
 function brandColour() {
