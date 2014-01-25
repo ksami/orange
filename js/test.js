@@ -57,8 +57,17 @@ function brandColour() {
   $("#brand:hover").css("color", myColours[i]);
 }
 
-function wordEntry() {
-  console.log(word);
+function wordClick() {
+  numWords++;
+  if(numWords<=9) {
+    var word = $("#wordentry").val();
+    var wordid = "#word" + numWords.toString();
+    $(wordid).removeClass("hide");
+    $(wordid + " h3:first-child").text(word);
+  }
+  else {
+    console.log("too many words")
+  }
 }
 
 // $(function () {
