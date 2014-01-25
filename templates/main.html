@@ -13,14 +13,6 @@
 
   <link rel="stylesheet" href="../FlipClockFiles/css/flipclock.css">
 
-  <!--Scripts below-->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-  <script src="../FlipClockFiles/js/libs/base.js"></script>
-  <script src="../FlipClockFiles/js/flipclock.js"></script>
-  <script src="../FlipClockFiles/js/faces/hourlycounter.js"></script>
-  <script src="../FlipClockFiles/js/faces/minutecounter.js"></script>
-
 
 
 </head>
@@ -30,28 +22,28 @@
   <div class = "container-fluid" id="wrap">
     <!--Navigation bar at the top-->
     
+    <div class = "navbar-wrapper">
+      <div class = "navbar navbar-inverse span8">
+        <div class = "navbar-inner">
+          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class = "brand" href = "/">Orange</a>
 
-    <div class = "navbar navbar-inverse">
-      <div class = "navbar-inner">
-        <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class = "brand" id = "brand" onmouseover="javascript:brandColour()" href = "/">Orange</a>
-
-        <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed within .navbar-collapse.collapse. -->
-        <div class="nav-collapse collapse">
-          <ul class="nav">
-            <li><a href = "/"><i class = "icon-home icon-white"></i> Home</a></li>
+          <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed within .navbar-collapse.collapse. -->
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href = "/"><i class = "icon-home icon-white"></i> Home</a></li>
 <!--               <li><a href="/addlist"><i class = "icon-plus icon-white"></i> Add</a></li> -->
-            <li><a href = "/search"><i class = "icon-book icon-white"></i> What?</a></li>
-          </ul>
-        </div>  <!--/nav collapse-->
-      </div>  <!--/navbar inner rounded-->
-    </div>  <!--/navbar rectangle-->
-
+              <li><a href = "/search"><i class = "icon-book icon-white"></i> What?</a></li>
+            </ul>
+          </div>  <!--/nav collapse-->
+        </div>  <!--/navbar inner rounded-->
+      </div>  <!--/navbar rectangle-->
+    </div>  <!--/navbar wrapper-->
 
 
     <div class = "container-fluid">
@@ -62,10 +54,10 @@
         <!--///////////////////////////////////////-->
 
         <div class = "row-fluid">
-          <div class= "clock" style="margin:2em;"></div>
+          <div class= "clock" style="margin:10em;"></div>
 
-          <!--TIMER HERE-->
-          
+            <!--TIMER HERE-->
+
 
         </div>  <!--/row-->
 
@@ -88,51 +80,42 @@
           <div class = "row-fluid text-center wordrow">
             <div class = "span4 word">
               <h3 class = "text-left" id="word1">Word1</h3>
-              <h3 class = "text-right" id="count1">1</h3>
               <p><a class="btn btn-info" href="javascript:helloWorld()">Click &raquo;</a></p>
             </div>
             <div class = "span4 word">
               <h3 class = "text-left" id="word2">Word2</h3>
-              <h3 class = "text-right" id="count2">1</h3>
               <p><a class="btn btn-info" href="/">Click &raquo;</a></p>
             </div>
             <div class = "span4 word hide">
               <h3 class = "text-left" id="word3">Word3</h3>
-              <h3 class = "text-right" id="count3">1</h3>
               <p><a class="btn btn-info" href="/">Click &raquo;</a></p>
             </div>
           </div>  <!--/row-->
           <div class = "row-fluid text-center wordrow hide">
             <div class = "span4 word">
               <h3 class = "text-left" id="word4">Word4</h3>
-              <h3 class = "text-right" id="count4">1</h3>
               <p><a class="btn btn-info" href="javascript:helloWorld()">Click &raquo;</a></p>
             </div>
             <div class = "span4 word hide">
               <h3 class = "text-left" id="word5">Word5</h3>
-              <h3 class = "text-right" id="count5">1</h3>
               <p><a class="btn btn-info" href="/">Click &raquo;</a></p>
             </div>
             <div class = "span4 word hide">
               <h3 class = "text-left" id="word6">Word6</h3>
-              <h3 class = "text-right" id="count6">1</h3>
               <p><a class="btn btn-info" href="/">Click &raquo;</a></p>
             </div>
           </div>  <!--/row-->
           <div class = "row-fluid text-center wordrow hide">
             <div class = "span4 word">
               <h3 class = "text-left" id="word7">Word7</h3>
-              <h3 class = "text-right" id="count7">1</h3>
               <p><a class="btn btn-info" href="javascript:helloWorld()">Click &raquo;</a></p>
             </div>
             <div class = "span4 word hide">
               <h3 class = "text-left" id="word8">Word8</h3>
-              <h3 class = "text-right" id="count8">1</h3>
               <p><a class="btn btn-info" href="/">Click &raquo;</a></p>
             </div>
             <div class = "span4 word hide">
               <h3 class = "text-left" id="word9">Word9</h3>
-              <h3 class = "text-right" id="count9">1</h3>
               <p><a class="btn btn-info" href="/">Click &raquo;</a></p>
             </div>
           </div>  <!--/row-->
@@ -163,5 +146,28 @@
   <script src="../bootstrap/js/bootstrap-select.js"></script>
   <script src="../bootstrap/js/bootstrap-switch.js"></script>
   <script src="../js/test.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+  <script src="../FlipClockFiles/js/libs/base.js"></script>
+  <script src="../FlipClockFiles/js/flipclock.js"></script>
+  <script src="../FlipClockFiles/js/faces/hourlycounter.js"></script>
+  <script src="../FlipClockFiles/js/faces/minutecounter.js"></script>
+  <script type="text/javascript">
+    var clock;
+    $(document).ready(function(){
+      var clock = $('.clock').FlipClock(10, {
+            countdown: true,
+        });
+
+      $('#startclock').click(function(){
+        clock.setTime(420);
+      });
+
+
+
+
+    }); 
+
+  </script>
 </body>
 </html>
