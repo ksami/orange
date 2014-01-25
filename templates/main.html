@@ -50,8 +50,12 @@
         <!--//Page content goes here             //-->
         <!--///////////////////////////////////////-->
 
+
         <div class = "row-fluid">
-          <button id ="chooseclock">Timer</button><button id = "choosestopclock">Stop Clock</button>
+          <ul class = "nav nav-tabs">
+            <li class="active" id ="chooseclock"><a href = "#" data-toggle="tab">Timer</a></li>
+            <li id = "choosestopclock"><a href = "#" data-toggle="tab">Stop Clock</a></li>
+          </ul>
           <div id= "clock"></div>
           <button id = "startstopclock">Start/Stop Clock</button>
           <div id="stopclock"></div>
