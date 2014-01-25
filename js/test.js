@@ -103,6 +103,47 @@ function hoverRemove(id) {
   $(wordid + " a i").toggleClass("icon-white");
 }
 
+function removeWord(id) {
+  if(id<numWords) {
+    var i=id;
+    while(i<numWords) {
+      var replacingWord = $("#word" + (i+1).toString() + " h3:first-of-type").val();
+      $("#word" + i.toString() + " h3:first-of-type").text(replacingWord);
+
+      var replacingCount = $("#count" + (i+1).toString()).val();
+      $("#count" + i.toString()).text(replacingCount);
+      i++;
+    }
+
+    switch(id) {
+      case 1: count1 = count2;
+      case 2: count2 = count3;
+      case 3: count3 = count4;
+      case 4: count4 = count5;
+      case 5: count5 = count6;
+      case 6: count6 = count7;
+      case 7: count7 = count8;
+      case 8: count8 = count9;
+      case 9: count9 = 0; break;
+    }
+  }
+  else {
+    switch(id) {
+      case 1: count1 = 0; break;
+      case 2: count2 = 0; break;
+      case 3: count3 = 0; break;
+      case 4: count4 = 0; break;
+      case 5: count5 = 0; break;
+      case 6: count6 = 0; break;
+      case 7: count7 = 0; break;
+      case 8: count8 = 0; break;
+      case 9: count9 = 0; break;
+    }
+  }
+  numWords--;
+  $("#word" + numWords.toString()).addClass("hide");
+}
+
 // $(function () {
 //   $('#userid').val(testLogin());
 // });
