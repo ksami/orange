@@ -1,12 +1,6 @@
 // Self-written js/jquery testing nia
-var count = 0;
 
-function plusplus() {
-  count++;
-  $("#number").text(count);
-  console.log(count);
-}
-
+var numWords = 0;
 var count1 = 0;
 var count2 = 0;
 var count3 = 0;
@@ -40,13 +34,6 @@ function counter(id) {
     console.log("id not shown yet");
   }
 }
-
-var numWords = 0;
-
-function helloWorld() {
-  $("#word1").text('helloWorld!');
-}
-
 
 function brandColour() {
   var myColours = new Array();
@@ -129,10 +116,17 @@ function removeWord(id) {
   numWords--;
 }
 
+// KEYBINDS
+
 // konami code!
 Mousetrap.bind('up up down down left right left right b a', function() {
   $("body").css("background-image", "url('../images/cosmos_room.jpg')");
   console.log("konami code activated");
+});
+
+// cookie code!
+Mousetrap.bind('k c o o k i e', function() {
+  alert("here's a cookie!");
 });
 
 Mousetrap.bind(['q', '1'], function() {
