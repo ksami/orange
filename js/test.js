@@ -1,7 +1,12 @@
 // Self-written js/jquery testing nia
+var count = 0;
+function counter() {
+  count++;
+  console.log(count);
+}
 
 function helloWorld() {
-  $("#word1").html('helloWorld!');
+  $("#word1").text('helloWorld!');
 }
 
 //todo more colours

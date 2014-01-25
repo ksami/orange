@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="../css/flipclock.css">
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<script src="../js/flipclock/libs/base.js"></script>
+		<script src="../js/flipclock/flipclock.js"></script>
+		<script src="../js/flipclock/faces/counter.js"></script>
+		<script src="../js/flipclock/faces/hourlycounter.js"></script>
+		<script src="../js/flipclock/faces/dailycounter.js"></script>
+		<script src="../js/flipclock/faces/minutecounter.js"></script>
+		<script src="../js/flipclock/faces/twentyfourhourclock.js"></script>
+		<script src="../js/flipclock/faces/twelvehourclock.js"></script>
+		
+	</head>
+	<body>
+		<!--<div class="clock" style="margin:2em;"></div>-->
+
+		<script type="text/javascript">var clicks = 0;</script>
+		<form>
+		<div class = "row-fluid">
+          <div class= "counter" style="margin:10em;"></div>
+		<input value="Click" type="button" onclick="clicks++; console.log(clicks);">
+		</form>
+	</body>
+</html>
