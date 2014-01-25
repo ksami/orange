@@ -24,6 +24,10 @@ handlers:
 - url: /bootstrap
   static_dir: bootstrap
 
+# Flipclock
+- url: /FlipClockFiles
+  static_dir: FlipClockFiles
+
 - url: /.*
   script: main.app
 
