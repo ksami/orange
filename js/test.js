@@ -18,7 +18,6 @@ var count9 = 0;
 
 function helloWorld() {
   $("#word1").text('helloWorld!');
-<<<<<<< HEAD
 }
 
 function keyIncrease(e) {
@@ -38,8 +37,6 @@ function keyIncrease(e) {
     case 9: if(numWords>=9) count9++; break;
     default: break;
   }
-=======
->>>>>>> 135d93f8dec541233133e136a6ce276dcfc5ebef
 }
 
 function brandColour() {
@@ -61,7 +58,7 @@ function brandColour() {
 }
 
 function wordEntry() {
-
+  console.log(word);
 }
 
 // $(function () {
