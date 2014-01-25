@@ -4,6 +4,18 @@ function helloWorld() {
   $("#word1").html('helloWorld!');
 }
 
+//todo more colours
+function brandColour() {
+  var myColours = new Array();
+  myColours[0] = "#03c03c";
+  myColours[1] = "#ff0000";
+  myColours[2] = "#0000ff";
+  myColours[3] = "#ff6600";
+
+  var i = Math.floor(Math.random()*4);
+
+  $("#brand:hover").css("color", myColours[i]);
+}
 
 // $(function () {
 //   $('#userid').val(testLogin());
