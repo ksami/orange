@@ -1,7 +1,37 @@
 // Self-written js/jquery testing nia
 
+var numWords = 0;
+var count1 = 0;
+var count2 = 0;
+var count3 = 0;
+var count4 = 0;
+var count5 = 0;
+var count6 = 0;
+var count7 = 0;
+var count8 = 0;
+var count9 = 0;
+
 function helloWorld() {
-  $("#word1").html('helloWorld!');
+  $("#word1").text('helloWorld!');
+}
+
+function keyIncrease(e) {
+  var unicode = e.charCode ? e.charCode : e.keyCode;
+  var actualKey = String.fromCharCode(unicode);
+
+  switch(actualKey)
+  {
+    case 1: if(numWords>=1) count1++; break;
+    case 2: if(numWords>=2) count2++; break;
+    case 3: if(numWords>=3) count3++; break;
+    case 4: if(numWords>=4) count4++; break;
+    case 5: if(numWords>=5) count5++; break;
+    case 6: if(numWords>=6) count6++; break;
+    case 7: if(numWords>=7) count7++; break;
+    case 8: if(numWords>=8) count8++; break;
+    case 9: if(numWords>=9) count9++; break;
+    default: break;
+  }
 }
 
 function brandColour() {
@@ -23,24 +53,9 @@ function brandColour() {
 }
 
 function wordEntry() {
-  
+
 }
 
 // $(function () {
 //   $('#userid').val(testLogin());
 // });
-
-
-function togglePage() {
-  $("#page").toggleClass("hidepage");
-}
-
-
-function loginPlease() {
-  //document.getElementById("page").innerHTML="PLease auth our app!";
-  //$("#page2").toggleClass("hidepage");
-  //window.location.assign("/");
-  //$("#page").load("/addlist #page2");
-  $("#page").html('<h3>Our reviews page only likes people who use Facebook sorry :(</h3> <br><h4>Psst... Try logging into Facebook over at the sidebar and remember to accept our app!</h4>');
-  $("#page").toggleClass("hidepage");
-}
