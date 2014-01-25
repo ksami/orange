@@ -1,11 +1,12 @@
 // Self-written js/jquery testing nia
 var count = 0;
-function counter() {
+
+function plusplus() {
   count++;
+  $("#number").text(count);
   console.log(count);
 }
 
-var numWords = 0;
 var count1 = 0;
 var count2 = 0;
 var count3 = 0;
@@ -15,6 +16,27 @@ var count6 = 0;
 var count7 = 0;
 var count8 = 0;
 var count9 = 0;
+
+function counter(id) {
+  var activecount = 0;
+  switch(id)
+  {
+    case 1: count1++; activecount = count1; break;
+    case 2: count2++; activecount = count2; break;
+    case 3: count3++; activecount = count3; break;
+    case 4: count4++; activecount = count4; break;
+    case 5: count5++; activecount = count5; break;
+    case 6: count6++; activecount = count6; break;
+    case 7: count7++; activecount = count7; break;
+    case 8: count8++; activecount = count8; break;
+    case 9: count9++; activecount = count9; break;
+  }
+  var countid = "#count" + id.toString();
+  $(countid).text(activecount);
+  console.log("word is " + id + " and =" + activecount);
+}
+
+var numWords = 0;
 
 function helloWorld() {
   $("#word1").text('helloWorld!');
