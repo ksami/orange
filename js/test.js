@@ -42,24 +42,6 @@ function helloWorld() {
   $("#word1").text('helloWorld!');
 }
 
-function keyIncrease(e) {
-  var unicode = e.charCode ? e.charCode : e.keyCode;
-  var actualKey = String.fromCharCode(unicode);
-
-  switch(actualKey)
-  {
-    case 1: if(numWords>=1) count1++; break;
-    case 2: if(numWords>=2) count2++; break;
-    case 3: if(numWords>=3) count3++; break;
-    case 4: if(numWords>=4) count4++; break;
-    case 5: if(numWords>=5) count5++; break;
-    case 6: if(numWords>=6) count6++; break;
-    case 7: if(numWords>=7) count7++; break;
-    case 8: if(numWords>=8) count8++; break;
-    case 9: if(numWords>=9) count9++; break;
-    default: break;
-  }
-}
 
 function brandColour() {
   var myColours = new Array();
