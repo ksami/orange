@@ -1,4 +1,14 @@
-//orange.css
+.hide {
+  display: none;
+}
+
+.word {
+  background-color: #ffb347;
+}
+
+.wordrow {
+  margin: 1px;
+}
 
 .navbar .brand {
   text-decoration: none;
