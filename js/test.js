@@ -124,6 +124,11 @@ function removeWord(id) {
   numWords--;
 }
 
+// konami code!
+Mousetrap.bind('up up down down left right left right b a', function() {
+  $("body").css("background-color", "black");
+});
+
 // $(function () {
 //   $('#userid').val(testLogin());
 // });
