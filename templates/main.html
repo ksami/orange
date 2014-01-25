@@ -50,18 +50,27 @@
         <!--//Page content goes here             //-->
         <!--///////////////////////////////////////-->
 
+        <div class="bs-sidebar hidden-print affix" role= "complementary" style>
+          <ul class= "nav bs-sidenav">
+            <li class>
+              <a href="#">View Statistics</a>
+            </li>
+          </ul>
+        </div>
 
-        <div class = "row-fluid">
+
+        <div class = "row-fluid" style="margin-left: 20%; margin-top: 1.5%; width: 550px;">
           <ul class = "nav nav-tabs">
             <li class="active" id ="chooseclock"><a href = "#" data-toggle="tab">Timer</a></li>
             <li id = "choosestopclock"><a href = "#" data-toggle="tab">Stop Clock</a></li>
           </ul>
           <div id= "clock"></div>
-          <button id = "startstopclock">Start/Stop Clock</button>
+          <button id = "startstopclock" style="
+          margin-left: 33%;">Start/Stop Clock</button>
           <div id="stopclock"></div>
           <div id = "storetimeentry">
             <input id = "timeentry" type = "text" placeholder = "Time in mins">
-            <button id ="starttimer">Submit</button>  
+            <button id ="starttimer" style="position: absolute; height: 30px; margin-left: 1px;">Submit</button>  
         </div>
           <!--For Debugging Clock <p id="checkClockTime">Time</p>-->  
             <!--TIMER HERE-->
@@ -84,7 +93,10 @@
         </div>  <!--/WORD ENTRY-->
 
         <!--WORD GRID HERE-->
-        <div class = "row-fluid">
+        <div class = "row-fluid"
+        style="margin-left: 25%;
+    margin-top: 80px;
+">
            <div class = "row-fluid text-center wordrow">
              <div class = "span4 word hide" id="word1">
               <a class = "pull-right" href = "javascript:removeWord(1)" onmouseover = "javascript:hoverRemove(1)" onmouseout="javascript:hoverRemove(1)"><i class = "icon-remove icon-white"></i></a>
