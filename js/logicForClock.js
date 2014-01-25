@@ -1,25 +1,35 @@
 var clock;
 var stopclock;
-var timeToBeSet;
-    function timeClick() {
-      timeToBeSet = $('#timeentry').val();
-      alert(timeToBeSet);
-    }
+//var timeToBeSet;
+
+
+
 $(document).ready(function(){
   var clock = $('#clock').FlipClock({
   autoStart: false
 });
   var stopclock = $('#stopclock').FlipClock({
     autoStart: false,
-    countDown: true
+    countDown: true,
   })
   $("#stopclock").hide();
+  $('#storetimeentry').hide();
 
   $('#chooseclock').click(function(){
-    $('#stopclock').hide();
-    $('#clock').show();
-    $('#startstopclock').show();
+  $('#stopclock').hide();
+  $('#storetimeentry').hide();
+  $('#clock').show();
+  $('#startstopclock').show();
   });
+
+  $('#choosestopclock').click(function(){
+  $('#stopclock').show();
+  $('#storetimeentry').show();
+  $('#clock').hide();
+  $('#startstopclock').hide();
+  });
+
+
 
   $('#startstopclock').click(function(){
       var time = clock.getTime();
@@ -33,19 +43,16 @@ $(document).ready(function(){
       {
        clock.stop();
        clock.setTime(0);
-       clock.getTime();
        //document.getElementById('checkClockTime').innerHTML= time;
       }
 
   });
-    $('#choosestopclock').click(function(){
-    $('#startstopclock').hide();
-    $('#clock').hide();
-    $('#stopclock').show();
-    stopclock.setTime(timeToBeSet);
+  $('#starttimer').click(function(){
+    var timeToBeSet = $('#timeentry').val();
+    stopclock.setTime(Number(timeToBeSet));
+    //alert(timeToBeSet);
+    stopclock.setCountdown(true);
     stopclock.start();
-
-
   });
 
   }); 
