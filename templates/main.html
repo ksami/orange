@@ -51,8 +51,14 @@
         <!--///////////////////////////////////////-->
 
         <div class = "row-fluid">
-          <div class= "clock"></div>
-
+          <button id ="chooseclock">Timer</button><button id = "choosestopclock">Stop Clock</button>
+          <div id= "clock"></div>
+          <button>StartStop</button>
+          <div id = "stopclock"></div> 
+          <form action = "javascript:timeClick()">  
+          <input id= "timeentry" type = "text" placeholder="Set Time in mins" ><input type = "submit">
+          </form> 
+          <!--For Debugging Clock <p id="checkClockTime">Time</p>-->  
             <!--TIMER HERE-->
 
 
@@ -169,22 +175,6 @@
   <script src="../FlipClockFiles/js/flipclock.js"></script>
   <script src="../FlipClockFiles/js/faces/hourlycounter.js"></script>
   <script src="../FlipClockFiles/js/faces/minutecounter.js"></script>
-  <script type="text/javascript">
-    var clock;
-    $(document).ready(function(){
-      var clock = $('.clock').FlipClock(10, {
-            countdown: true,
-        });
-
-      $('#startclock').click(function(){
-        clock.setTime(420);
-      });
-
-
-
-
-    }); 
-
-  </script>
+  <script src="../js/logicForClock.js"></script>
 </body>
 </html>
