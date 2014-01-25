@@ -1,0 +1,19 @@
+//orange.css
+
+.navbar .brand {
+  text-decoration: none;
+  border-right: 1;
+  border-bottom: 1;
+}
+
+.navbar .nav > li > a:hover,
+.navbar .nav > li > a:focus {
+  background-color: #bdc3c7;
+}
+
+.navbar-inverse .nav-collapse .nav > li > a:hover,
+.navbar-inverse .nav-collapse .nav > li > a:focus,
+.navbar-inverse .nav-collapse .dropdown-menu a:hover,
+.navbar-inverse .nav-collapse .dropdown-menu a:focus {
+  background-color: #bdc3c7;
+}
