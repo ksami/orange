@@ -58,15 +58,21 @@ function brandColour() {
 }
 
 function wordClick() {
-  numWords++;
-  if(numWords<=9) {
-    var word = $("#wordentry").val();
-    var wordid = "#word" + numWords.toString();
-    $(wordid).removeClass("hide");
-    $(wordid + " h3:first-child").text(word);
+  var word = $("#wordentry").val();
+  if(word=="")
+  {
+    alert("Enter something to remember the count by!");
   }
   else {
-    console.log("too many words")
+    numWords++;
+    if(numWords<=9) {
+      var wordid = "#word" + numWords.toString();
+      $(wordid).removeClass("hide");
+      $(wordid + " h3:first-child").text(word);
+    }
+    else {
+      console.log("too many words")
+    }
   }
 }
 
