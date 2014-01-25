@@ -2,6 +2,10 @@
   display: none;
 }
 
+#wordentry {
+  margin-bottom: 0px;
+}
+
 .word {
   background-color: #ffb347;
 }
@@ -10,8 +14,12 @@
   margin: 1px;
 }
 
+.navbar .nav > li > a {
+  color: #ffb347;
+}
+
 .navbar .brand {
-  text-decoration: none;
+  color: #ff6600;
   border-right: 1;
   border-bottom: 1;
 }
