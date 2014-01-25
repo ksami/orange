@@ -105,14 +105,12 @@ function hoverRemove(id) {
 
 function removeWord(id) {
   if(id<numWords) {
-    var i=id;
-    while(i<numWords) {
-      var replacingWord = $("#word" + (i+1).toString() + " h3:first-of-type").val();
+    for(i=id; i<numWords; i++) {
+      var replacingWord = $("#word" + (i+1).toString() + " h3:first-of-type").text();
       $("#word" + i.toString() + " h3:first-of-type").text(replacingWord);
 
-      var replacingCount = $("#count" + (i+1).toString()).val();
+      var replacingCount = $("#count" + (i+1).toString()).text();
       $("#count" + i.toString()).text(replacingCount);
-      i++;
     }
 
     switch(id) {
@@ -140,8 +138,8 @@ function removeWord(id) {
       case 9: count9 = 0; break;
     }
   }
-  numWords--;
   $("#word" + numWords.toString()).addClass("hide");
+  numWords--;
 }
 
 // $(function () {
