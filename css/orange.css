@@ -2,6 +2,11 @@
   display: none;
 }
 
+/* for overriding bootstrap for clock*/
+.flip > li {
+  line-height: inherit;
+}
+
 #wordentry {
   margin-bottom: 0px;
 }
