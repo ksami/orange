@@ -68,12 +68,17 @@ function wordClick() {
     if(numWords<=9) {
       var wordid = "#word" + numWords.toString();
       $(wordid).removeClass("hide");
-      $(wordid + " h3:first-child").text(word);
+      $(wordid + " h3:first-of-type").text(word);
     }
     else {
       console.log("too many words")
     }
   }
+}
+
+function hoverRemove(id) {
+  var wordid = "#word" + id.toString();
+  $(wordid + " a i").toggleClass("icon-white");
 }
 
 // $(function () {
