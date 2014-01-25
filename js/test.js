@@ -5,8 +5,6 @@ function helloWorld() {
 }
 
 
-
-
 // $(function () {
 //   $('#userid').val(testLogin());
 // });
