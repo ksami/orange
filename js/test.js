@@ -33,7 +33,7 @@ function counter(id) {
   }
   var countid = "#count" + id.toString();
   $(countid).text(activecount);
-  console.log("word is " + id + " and =" + activecount);
+  console.log("word is " + countid + " and =" + activecount);
 }
 
 var numWords = 0;
