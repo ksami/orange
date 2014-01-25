@@ -14,7 +14,7 @@ $(document).ready(function(){
   })
   $("#stopclock").hide();
   $('#storetimeentry').hide();
-
+  $('#mainstuff').hide();
   $('#chooseclock').click(function(){
   $('#stopclock').hide();
   $('#storetimeentry').hide();
