@@ -18,22 +18,27 @@ var count8 = 0;
 var count9 = 0;
 
 function counter(id) {
-  var activecount = 0;
-  switch(id)
-  {
-    case 1: count1++; activecount = count1; break;
-    case 2: count2++; activecount = count2; break;
-    case 3: count3++; activecount = count3; break;
-    case 4: count4++; activecount = count4; break;
-    case 5: count5++; activecount = count5; break;
-    case 6: count6++; activecount = count6; break;
-    case 7: count7++; activecount = count7; break;
-    case 8: count8++; activecount = count8; break;
-    case 9: count9++; activecount = count9; break;
+  if(id<=numWords) {
+    var activecount = 0;
+    switch(id)
+    {
+      case 1: count1++; activecount = count1; break;
+      case 2: count2++; activecount = count2; break;
+      case 3: count3++; activecount = count3; break;
+      case 4: count4++; activecount = count4; break;
+      case 5: count5++; activecount = count5; break;
+      case 6: count6++; activecount = count6; break;
+      case 7: count7++; activecount = count7; break;
+      case 8: count8++; activecount = count8; break;
+      case 9: count9++; activecount = count9; break;
+    }
+    var countid = "#count" + id.toString();
+    $(countid).text(activecount);
+    console.log("word is " + countid + " and =" + activecount);
   }
-  var countid = "#count" + id.toString();
-  $(countid).text(activecount);
-  console.log("word is " + countid + " and =" + activecount);
+  else {
+    console.log("id not shown yet");
+  }
 }
 
 var numWords = 0;
@@ -126,7 +131,36 @@ function removeWord(id) {
 
 // konami code!
 Mousetrap.bind('up up down down left right left right b a', function() {
-  $("body").css("background-color", "black");
+  $("body").css("background-image", "url('../images/cosmos_room.jpg')");
+  console.log("konami code activated");
+});
+
+Mousetrap.bind(['q', '1'], function() {
+  counter(1);
+});
+Mousetrap.bind(['w', '2'],  function() {
+  counter(2);
+});
+Mousetrap.bind(['e', '3'],  function() {
+  counter(3);
+});
+Mousetrap.bind(['a', '4'],  function() {
+  counter(4);
+});
+Mousetrap.bind(['s', '5'],  function() {
+  counter(5);
+});
+Mousetrap.bind(['d', '6'],  function() {
+  counter(6);
+});
+Mousetrap.bind(['z', '7'],  function() {
+  counter(7);
+});
+Mousetrap.bind(['x', '8'],  function() {
+  counter(8);
+});
+Mousetrap.bind(['c', '9'],  function() {
+  counter(9);
 });
 
 // $(function () {

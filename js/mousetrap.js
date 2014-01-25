@@ -47,7 +47,7 @@
 
     function x(a, b, d, c) {
         m.stopCallback(b, b.target || b.srcElement, d, c) || !1 !== a(b, d) || (b.preventDefault ? b.preventDefault() : b.returnValue = !1, b.stopPropagation ?
-            b.stopPropagation() : b.cancelBubble = !0)
+            b.stopPropagation() : b.cancelBubble = !0);
     }
 
     function y(a) {
