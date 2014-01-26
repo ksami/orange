@@ -169,17 +169,17 @@ google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(drawChart);
 function drawChart() {
   var data = google.visualization.arrayToDataTable([
-    ['Time Lapsed', 'Alright', 'This'],
-    ['0:20',                2,      3],
-    ['0:40',                5,      4],
-    ['1:00',                6,      8],
-    ['1:20',               10,     11]
+    ['Time Lapsed', 'Alright', 'OK', 'Next', 'lah'],
+    ['0:20',                2,      3, 1,       2],
+    ['0:40',                5,      4, 3,       5],
+    ['1:00',                6,      8, 8,       7],
+    ['1:20',               10,     11, 12,      13]
   ]);
 
   var options = {
-    title: 'Company Performance',
+    title: 'Number of repetitve Words',
     curveType: 'function',
-    legend: { position: 'bottom'}
+    //legend: { position: 'bottom'}
   };
 
   var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
