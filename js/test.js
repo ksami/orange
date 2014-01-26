@@ -1,5 +1,6 @@
 // Self-written js/jquery testing nia
 
+var numClicks = 0;  // for clickanim.js
 var numWords = 0;
 var count1 = 0;
 var count2 = 0;
@@ -12,6 +13,9 @@ var count8 = 0;
 var count9 = 0;
 
 function counter(id) {
+  // for clickanim.js
+  numClicks++;
+
   if(id<=numWords) {
     var activecount = 0;
     switch(id)
