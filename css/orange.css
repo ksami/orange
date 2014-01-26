@@ -11,6 +11,11 @@
   margin-bottom: 0px;
 }
 
+#myCanvas {
+  width: 200px;
+  height: 200px;
+}
+
 .word {
   background-color: #ffb347;
 }

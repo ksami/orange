@@ -15,24 +15,20 @@ var arcl1;
 var arcl2;
 var arcl3;
 
-function onResize(event) {
-	rotatePoint = view.center;
-}
-
 function onFrame(event) {
 	if(mark100==true) {
 		arc1.rotate(1, rotatePoint);
 	}
-    else if(mark200==true) {
+    if(mark200==true) {
     	arc2.rotate(-2, rotatePoint);
     }
-    else if(mark300==true) {
+    if(mark300==true) {
     	arc3.rotate(3, rotatePoint);
     }
-    else if(mark400==true) {
+    if(mark400==true) {
     	arc4.rotate(-4, rotatePoint);
     } 
-    else if(mark500==false && numClicks>50) {
+    if(mark500==false && numClicks>50) {
     	mark500 = true;
 
     	arcl1 = arc1.clone();
@@ -56,23 +52,28 @@ function onFrame(event) {
     	arcl3.rotate(-3, rotatePoint);
     }
     else if(mark400==false && numClicks>40) {
+    	mark400 = true;
     	arc4 = arc1.clone();
 		arc4.scale(4, rotatePoint);
     }
     else if(mark300==false && numClicks>30) {
+    	mark300 = true;
     	arc3 = arc1.clone();
 		arc3.scale(3, rotatePoint);
     }
     else if(mark200==false && numClicks>20) {
+    	mark200 = true;
     	arc2 = arc1.clone();
 		arc2.scale(2, rotatePoint);
     }
     else if(mark100==false && numClicks>10) {
+    	mark100 = true;
 		arc1 = new Path.Arc({
 		    from: rotatePoint.add(0,10),
 		    through: rotatePoint.add(7,7),
 		    to: rotatePoint.add(10,0),
 		    strokeColor: 'black'
 		})
+		console.log(rotatePoint.toString());
 	}
 }
