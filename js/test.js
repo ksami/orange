@@ -11,6 +11,8 @@ var count6 = 0;
 var count7 = 0;
 var count8 = 0;
 var count9 = 0;
+var allWords = new Array();
+allWords[0]="Time Lapsed";
 
 function counter(id) {
   // for clickanim.js

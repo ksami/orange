@@ -2,7 +2,8 @@ var clock;
 var stopclock;
 //var timeToBeSet;
 var timelapsed = 0;
-var bigArray[0] = allWords;
+var bigArray = new Array();
+bigArray[0] = allWords;
 
 function hideWordentry() {
   $("#wordentrydiv").toggleClass("hide");
@@ -49,7 +50,7 @@ $(document).ready(function(){
          clock.start();
          
          var interval =setInterval(function(){
-          for(int i=0;i<numWords+1;i++)
+          for(var i=0;i<numWords+1;i++)
           {
             var tempArray;
             tempArray[0] = timelapsed;
