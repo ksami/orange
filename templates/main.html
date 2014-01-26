@@ -63,33 +63,29 @@
           <ul class = "nav nav-tabs">
             <li class="active" id ="chooseclock"><a href = "#" data-toggle="tab">Timer</a></li>
             <li id = "choosestopclock"><a href = "#" data-toggle="tab">Stop Clock</a></li>
-            <li id = "viewstats"><a href = "#" data-toggle="tab">View Stats</a></li>
           </ul>
           <div id= "clock"></div>
           <button id = "startstopclock" style="
           margin-left: 33%;">Start/Stop Clock</button>
           <div id="stopclock"></div>
           <div id = "storetimeentry">
-            <input id = "timeentry" type = "text" placeholder = "Time in secs">
+            <input id = "timeentry" type = "text" placeholder = "Time in mins">
             <button id ="starttimer" style="position: absolute; height: 30px; margin-left: 1px;">Submit</button>  
-          </div>
-          <!--Table Here-->
-          <div id="stats">
-            <div id="chart_div" style="width: 900px; height: 500px;"></div>
-          </div>
-          <!--Table Ends-->
+        </div>
           <!--For Debugging Clock <p id="checkClockTime">Time</p>-->  
             <!--TIMER HERE-->
 
 
         </div>  <!--/row-->
 
-
+        <!--Table Here-->
+        <div id="chart_div" style="width: 900px; height: 500px;"></div>
+        <!--Table Ends-->
 
         <div class = "row-fluid">
 
           <!--ANIMATION HERE-->
-          <canvas id="myCanvas"></canvas>
+          <canvas id="myCanvas" resize></canvas>
 
         </div>
 

@@ -1,8 +1,8 @@
 var clock;
 var stopclock;
 //var timeToBeSet;
-
-
+var timelapsed = 0;
+var bigArray[0] = allWords;
 
 $(document).ready(function(){
   var clock = $('#clock').FlipClock({
@@ -49,11 +49,34 @@ $(document).ready(function(){
 
       if(time == 0 || time == 1)
       {
+        var tempNumWords = numWords; 
+         // while(tempNumWords != 0)
+         // {
+         //  var x=0;
+         //  allWords[x] += $("#word" + (x+1).toString() + " h3:first-of-type").text();
+         //  x++;
+         //  tempNumWords--;
+         // }
          clock.start();
+         
+         var interval =setInterval(function(){
+          for(int i=0;i<numWords+1;i++)
+          {
+            var tempArray;
+            tempArray[0] = timelapsed;
+            tempArray[i++] = $('#count'+(i+1)).val();
+          }
+          bigArray.push(tempArray);
+
+          timelapsed += 10;
+         },10000)
+
       }
       else
       {
        clock.stop();
+       clearInterval(interval);
+       alert(bigArray);
        clock.setTime(0);
        //document.getElementById('checkClockTime').innerHTML= time;
       }
