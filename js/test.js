@@ -135,6 +135,27 @@ Mousetrap.bind('k c o o k i e', function() {
   alert("here's a cookie!");
 });
 
+// kreator code!
+Mousetrap.bind('k r e a t o r', function() {
+  $("body").html("<h1 style='color: #ff6600'>kreated by ihsan, guohao and kenneth</h1>");
+});
+
+// guohao code!
+Mousetrap.bind('k g u o h a o', function() {
+  $("body").css("background-image", "url('../images/gh.jpg')");
+});
+
+// ihsan code!
+Mousetrap.bind('k i h s a n', function() {
+  $("body").css("background-image", "url('../images/ihsan.jpg')");
+});
+
+// ken code!
+Mousetrap.bind('k k e n', function() {
+  $("body").css("background-image", "url('../images/ken.jpg')");
+});
+
+
 Mousetrap.bind(['q', '1'], function() {
   counter(1);
 });
