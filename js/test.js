@@ -165,22 +165,21 @@ Mousetrap.bind(['c', '9'],  function() {
 //   $('#userid').val(testLogin());
 // });
 
-//Table stuff
 google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Year', 'Sales', 'Expenses'],
-          ['2004',  1000,      400],
-          ['2005',  1170,      460],
-          ['2006',  660,       1120],
-          ['2007',  1030,      540]
-        ]);
+google.setOnLoadCallback(drawChart);
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+    ['Time Lapsed', 'Alright', 'This'],
+    ['0:20',                2,      3],
+    ['0:40',                5,      4],
+    ['1:00',                6,      8],
+    ['1:20',               10,     11]
+  ]);
 
-        var options = {
-          title: 'Company Performance'
-        };
+  var options = {
+    title: 'Company Performance'
+  };
 
-        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
+  var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+  chart.draw(data, options);
+}
