@@ -7,8 +7,12 @@
   line-height: inherit;
 }
 
-#wordentry {
+#wordentry, #timeentry {
   margin-bottom: 0px;
+}
+
+#wordentrydiv {
+  padding-top: 50px;
 }
 
 #myCanvas {

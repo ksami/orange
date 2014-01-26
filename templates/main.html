@@ -59,15 +59,15 @@
             <li id = "choosestopclock"><a href = "#" data-toggle="tab">Timer</a></li>
           </ul>
 
-          <div class="span5 offset4 text-center" id="showclock">
+          <div class="span5 offset3" id="showclock">
             <div id= "clock"></div>
-            <button id = "startstopclock">Start/Stop Clock</button>
+            <button id = "startstopclock" class="offset3">Start/Stop Clock</button>
           </div>
           
-          <div class="span5 offset4 text-center" id="showstopclock">
+          <div class="span5 offset3" id="showstopclock">
             <div id="stopclock"></div>
             <div id = "storetimeentry">
-              <input id = "timeentry" type = "text" placeholder = "Time in mins">
+              <input class="offset3" id = "timeentry" type = "text" placeholder = "Time in mins">
               <button id ="starttimer">Submit</button>  
             </div>
           </div>
@@ -82,20 +82,23 @@
         <!--Table Ends-->
 
 
+        <!--ANIMATION AND ENTRY-->
         <div class = "row-fluid">
 
           <!--ANIMATION HERE-->
-          <canvas id="myCanvas"></canvas>
+          <div class = "span4" id="anim">
+            <canvas id="myCanvas"></canvas>
+          </div>
 
-        </div>
+          <!--WORD ENTRY HERE-->
+          <div class="span4" id="wordentrydiv">
+            <form action="javascript:wordClick()">
+              <input id="wordentry" type="text" placeholder="Enter a word or phrase">
+              <button type="submit" class="btn">Submit</button>
+            </form>
+          </div>
 
-        <!--WORD ENTRY HERE-->
-        <div class = "row-fluid">
-          <form action="javascript:wordClick()">
-            <input id="wordentry" type="text" placeholder="Type something...">
-            <button type="submit" class="btn">Submit</button>
-          </form>
-        </div>  <!--/WORD ENTRY-->
+        </div>  <!--/animation and entry-->
 
         <!--WORD GRID HERE-->
         <div class = "row-fluid"

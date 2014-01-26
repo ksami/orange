@@ -2,7 +2,10 @@ var clock;
 var stopclock;
 //var timeToBeSet;
 
-
+function hideWordentry() {
+  $("#wordentrydiv").toggleClass("hide");
+  $("#anim").addClass("offset4");
+}
 
 $(document).ready(function(){
   var clock = $('#clock').FlipClock({
@@ -41,14 +44,17 @@ $(document).ready(function(){
        clock.setTime(0);
        //document.getElementById('checkClockTime').innerHTML= time;
       }
-
+      hideWordentry();
   });
+
   $('#starttimer').click(function(){
     var timeToBeSet = $('#timeentry').val();
     stopclock.setTime(Number(timeToBeSet));
     //alert(timeToBeSet);
     stopclock.setCountdown(true);
     stopclock.start();
+
+    hideWordentry();
   });
 
-  }); 
+}); 
