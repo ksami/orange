@@ -22,11 +22,20 @@
 
 .word {
   background-color: #e7e7e7;
-  padding: 4px;
+  padding: 0px;
 }
 
 .wordrow {
   margin: 1px;
+}
+
+.wordbtn {
+  background-color: #e7e7e7;
+  margin: 0px;
+}
+
+.wordbtn:hover {
+  background-color: #eeeeee;
 }
 
 .navbar .nav > li > a {
