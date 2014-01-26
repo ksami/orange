@@ -4,6 +4,11 @@ var stopclock;
 var timelapsed = 0;
 var bigArray[0] = allWords;
 
+function hideWordentry() {
+  $("#wordentrydiv").toggleClass("hide");
+  $("#anim").addClass("offset4");
+}
+
 $(document).ready(function(){
   var clock = $('#clock').FlipClock({
   autoStart: false
@@ -12,35 +17,19 @@ $(document).ready(function(){
     autoStart: false,
     countDown: true,
   })
-  $("#stopclock").hide();
-  $('#storetimeentry').hide();
-  $('#stats').hide();
+  $("#showstopclock").hide();
+  $('#showclock').show();
 
 
   $('#chooseclock').click(function(){
-    $('#stopclock').hide();
-    $('#storetimeentry').hide();
-    $('#clock').show();
-    $('#startstopclock').show();
-    $('#stats').hide();
+    $('#showstopclock').hide();
+    $('#showclock').show();
   });
 
   $('#choosestopclock').click(function(){
-    $('#stopclock').show();
-    $('#storetimeentry').show();
-    $('#clock').hide();
-    $('#startstopclock').hide();
-    $('#stats').hide();
+    $('#showstopclock').show();
+    $('#showclock').hide();
   });
-
-  $('#viewstats').click(function(){
-    $('#stopclock').hide();
-    $('#storetimeentry').hide();
-    $('#clock').hide();
-    $('#startstopclock').hide();
-    $('#stats').show();
-  })
-
 
 
   $('#startstopclock').click(function(){
@@ -80,14 +69,17 @@ $(document).ready(function(){
        clock.setTime(0);
        //document.getElementById('checkClockTime').innerHTML= time;
       }
-
+      hideWordentry();
   });
+
   $('#starttimer').click(function(){
     var timeToBeSet = $('#timeentry').val();
     stopclock.setTime(Number(timeToBeSet));
     //alert(timeToBeSet);
     stopclock.setCountdown(true);
     stopclock.start();
+
+    hideWordentry();
   });
 
-  }); 
+}); 
