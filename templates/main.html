@@ -43,47 +43,43 @@
     </div>  <!--/navbar rectangle-->
 
 
-    <div class = "container-fluid">
-      <div class = "row-fluid">
+    <div class = "container-fluid" id="page">
+      <div class = "row-fluid" id="page-content">
 
         <!--///////////////////////////////////////-->
         <!--//Page content goes here             //-->
         <!--///////////////////////////////////////-->
 
-        <div class="bs-sidebar hidden-print affix" role= "complementary" style>
-          <ul class= "nav bs-sidenav">
-            <li class>
-              <a href="#">View Statistics</a>
-            </li>
-          </ul>
-        </div>
+        <!--CLOCK AND STATS-->
+        <div class = "row-fluid" id="clockstats">
 
-
-        <div class = "row-fluid" style="margin-left: 20%; margin-top: 1.5%; width: 550px;">
           <ul class = "nav nav-tabs">
-            <li class="active" id ="chooseclock"><a href = "#" data-toggle="tab">Timer</a></li>
-            <li id = "choosestopclock"><a href = "#" data-toggle="tab">Stop Clock</a></li>
-            <li id = "viewstats"><a href = "#" data-toggle="tab">View Stats</a></li>
+            <!--ihsan did this (WHAT?!?!?!?!?)-->
+            <li class="active" id ="chooseclock"><a href = "#" data-toggle="tab">Stopwatch</a></li>
+            <li id = "choosestopclock"><a href = "#" data-toggle="tab">Timer</a></li>
           </ul>
-          <div id= "clock"></div>
-          <button id = "startstopclock" style="
-          margin-left: 33%;">Start/Stop Clock</button>
-          <div id="stopclock"></div>
-          <div id = "storetimeentry">
-            <input id = "timeentry" type = "text" placeholder = "Time in mins">
-            <button id ="starttimer" style="position: absolute; height: 30px; margin-left: 1px;">Submit</button>  
+
+          <div class="span5 offset4 text-center" id="showclock">
+            <div id= "clock"></div>
+            <button id = "startstopclock">Start/Stop Clock</button>
           </div>
-          <!--Table Here-->
-          <div id="stats">
-            <div id="chart_div" style="width: 900px; height: 500px;"></div>
+          
+          <div class="span5 offset4 text-center" id="showstopclock">
+            <div id="stopclock"></div>
+            <div id = "storetimeentry">
+              <input id = "timeentry" type = "text" placeholder = "Time in mins">
+              <button id ="starttimer">Submit</button>  
+            </div>
           </div>
-          <!--Table Ends-->
+      
           <!--For Debugging Clock <p id="checkClockTime">Time</p>-->  
-            <!--TIMER HERE-->
+
+        </div>  <!--/clock and stats-->
 
 
-        </div>  <!--/row-->
-
+        <!--Table Here-->
+        <div id="chart_div"></div>
+        <!--Table Ends-->
 
 
         <div class = "row-fluid">
@@ -94,10 +90,7 @@
         </div>
 
         <!--WORD ENTRY HERE-->
-        <div class = "row-fluid" style="
-    margin-left: 30%;
-    margin-top: 5%;
-">
+        <div class = "row-fluid">
           <form action="javascript:wordClick()">
             <input id="wordentry" type="text" placeholder="Type something...">
             <button type="submit" class="btn">Submit</button>
@@ -193,14 +186,14 @@
 
   <!--////////        All JS loaded here       //////////-->
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-  <script src="../bootstrap/js/jquery-1.8.3.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="../bootstrap/js/bootstrap.min.js"></script>
   <script src="../bootstrap/js/bootstrap-select.js"></script>
   <script src="../js/mousetrap.min.js"></script>
   <script src="../js/paper-full.min.js"></script>
   <script src="../js/test.js"></script>
   <script type="text/paperscript" src="../js/clickanim.js" canvas="myCanvas"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
 
   <script src="../FlipClockFiles/js/libs/base.js"></script>
   <script src="../FlipClockFiles/js/flipclock.js"></script>
