@@ -14,21 +14,32 @@ $(document).ready(function(){
   })
   $("#stopclock").hide();
   $('#storetimeentry').hide();
+  $('#stats').hide();
+
 
   $('#chooseclock').click(function(){
-    $('.mainstuff').hide(); 
-  $('#stopclock').hide();
-  $('#storetimeentry').hide();
-  $('#clock').show();
-  $('#startstopclock').show();
+    $('#stopclock').hide();
+    $('#storetimeentry').hide();
+    $('#clock').show();
+    $('#startstopclock').show();
+    $('#stats').hide();
   });
 
   $('#choosestopclock').click(function(){
-  $('#stopclock').show();
-  $('#storetimeentry').show();
-  $('#clock').hide();
-  $('#startstopclock').hide();
+    $('#stopclock').show();
+    $('#storetimeentry').show();
+    $('#clock').hide();
+    $('#startstopclock').hide();
+    $('#stats').hide();
   });
+
+  $('#viewstats').click(function(){
+    $('#stopclock').hide();
+    $('#storetimeentry').hide();
+    $('#clock').hide();
+    $('#startstopclock').hide();
+    $('#stats').show();
+  })
 
 
 
