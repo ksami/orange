@@ -4,7 +4,7 @@ var stopclock;
 
 function hideWordentry() {
   $("#wordentrydiv").toggleClass("hide");
-  $("#anim").addClass("offset4");
+  $("#anim").addClass("offset5");
 }
 
 $(document).ready(function(){
