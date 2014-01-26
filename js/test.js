@@ -177,7 +177,9 @@ function drawChart() {
   ]);
 
   var options = {
-    title: 'Company Performance'
+    title: 'Company Performance',
+    curveType: 'function',
+    legend: { position: 'bottom'}
   };
 
   var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
