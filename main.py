@@ -34,7 +34,16 @@ class MainPage(webapp2.RequestHandler):
 	template = jinja_environment.get_template('main.html')
 	self.response.out.write(template.render())
 
+
+class PlayPage(webapp2.RequestHandler):
+	
+  def get(self):
+	template = jinja_environment.get_template('playtime.html')
+	self.response.out.write(template.render())
+
+
 # if url ends with just / run the class MainPage
 app = webapp2.WSGIApplication([
-	('/', MainPage)
+	('/', MainPage),
+	('/play', PlayPage)
 ], debug=True)
